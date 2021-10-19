@@ -12,22 +12,17 @@ var isValid = function (s) {
 
     if (stack.length === 0) return false
 
-    let lastElement
-
     switch (element) {
       case ')':
-        lastElement = stack.pop()
-        if (lastElement === '{' || lastElement === '[') return false
+        if (stack.pop() !== '(') return false
         break
 
       case '}':
-        lastElement = stack.pop()
-        if (lastElement === '(' || lastElement === '[') return false
+        if (stack.pop() !== '{') return false
         break
 
       case ']':
-        lastElement = stack.pop()
-        if (lastElement === '(' || lastElement === '{') return false
+        if (stack.pop() !== '[') return false
         break
     }
   }
