@@ -5,7 +5,7 @@
  */
 var buddyStrings = function (s, goal) {
   // Edge Case 1: s나 goal의 길이가 똑같지 않거나 없는 경우
-  if (s.length == 0 || goal.length == 0 || (s.length != goal.length)) return false;
+  if (s.length === 0 || goal.length === 0 || (s.length !== goal.length)) return false;
 
   // Edge Case 2: s와 goal 똑같은 경우 (s = "aa", goal = "aa" / s = "ab", goal = "ab")
   if (s === goal) {
