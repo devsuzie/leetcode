@@ -19,6 +19,5 @@ var findTheWinner = function (n, k) {
     que.shift();
   }
 
-  const [winner] = que;
-  return winner;
+  return [winner] = que;
 };
